@@ -126,6 +126,12 @@ p {
   margin-bottom: 2rem;
 }
 
+h2 {
+  font-size: 2rem;
+  font-family: "Merriweather", serif;
+  margin-bottom: 2rem;
+}
+
 /* navigaiton bar ---------------------------------*/
 .header {
   background-color: var(--white);
@@ -315,11 +321,8 @@ p {
   margin-left: 2rem;
 }
 
-.landing-page__review-header {
-  font-size: 2rem;
-  font-family: "Merriweather", serif;
-  margin-bottom: 2rem;
-}
+/* .landing-page__review-header {
+} */
 
 /* media queries */
 
@@ -340,4 +343,71 @@ p {
   .landing-page__review-text {
     margin: 0;
   }
+}
+
+/* DEALS OF THE MONTH SECTION ---------------------------------*/
+
+.landing-page__deals-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.landing-page__deals-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.landing-page__deal {
+  width: 350px;
+  aspect-ratio: 1 / 1;
+  background-color: red;
+  border-radius: 4px;
+}
+
+.landing-page__deal {
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  cursor: pointer;
+}
+
+.landing-page__deal:hover,
+.landing-page__deal:focus-visible {
+  border: 2px solid var(--blue-violet);
+}
+
+.landing-page__arm-chair-image {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url(assets/chair.jpg);
+}
+
+.landing-page__sofa-image {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url(assets/sofa.jpg);
+}
+
+.landing-page__table-image {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url(assets/table.jpg);
+}
+
+.landing-page__deal-paragraph {
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: 700;
 }
