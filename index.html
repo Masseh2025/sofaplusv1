@@ -45,10 +45,10 @@
           </svg>
         </button>
       </nav>
-      <nav aria-label="secondary">
+      <nav aria-label="secondary" data-secondary-navigation aria-hidden="true">
         <ul
           class="navigation__list navigation__list--secondary invisble"
-          data-secondary-navigation
+          data-secondary-navigation-list
         >
           <li class="navigation__list-item"><a href="#">Checkout</a></li>
           <li class="navigation__list-item"><a href="#">Contact</a></li>
@@ -77,7 +77,20 @@
         />
       </section>
 
-      <section class="landing-page__review section"></section>
+      <section class="landing-page__review section">
+        <div class="landing-page__review-profile"></div>
+        <div class="landing-page__review-text">
+          <h2 class="landing-page__review-header">Our reviews!</h2>
+          <p aria-labelledby="quote" id="quote">
+            “Probbaly one of the best places to get furniture in the whole
+            universe!”
+          </p>
+          <p aria-labelledby="quotedby" id="quotedby">
+            -Harold, customer for over 10 years
+          </p>
+        </div>
+        <div class="landing-page-review--yellow-background"></div>
+      </section>
 
       <section class="landing-page__deals section"></section>
 
