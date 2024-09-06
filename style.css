@@ -159,6 +159,11 @@ p {
   text-decoration: none;
 }
 
+.navigation__list-item a:hover,
+.navigation__list-item a:focus-visible {
+  color: blueviolet;
+}
+
 .navigation__right-side {
   display: flex;
   align-items: center;
