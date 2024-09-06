@@ -1,0 +1,260 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* CSS RESET ---------------------------------^^^ */
+
+.background {
+  font-family: "Karla", system-ui;
+  background-color: var(--light-yellow);
+  color: var(--black);
+}
+
+:root {
+  --white: #ffffff;
+  --darker-white: #f2f2f2;
+  --black: #1a1a1a;
+  --yellow: #f7ffc2;
+  --light-yellow: #fefff5;
+}
+
+/* non specific css ---------------------------------*/
+
+.button {
+  background-color: var(--yellow);
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+/* navigaiton bar ---------------------------------*/
+.header {
+  background-color: var(--white);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.navigation__logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.navigation__list {
+  list-style: none;
+  display: flex;
+}
+
+.navigation__list-item {
+  font-weight: 700;
+  margin-right: 3rem;
+}
+
+.navigation__list-item a {
+  text-decoration: none;
+}
+
+.navigation__right-side {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--darker-white);
+  border-radius: 100%;
+}
+
+.navigation__shopping-cart {
+  margin-right: 1rem;
+}
+
+.navigation__hamburger {
+  background: none;
+  border: none;
+  display: none;
+}
+
+/* secondary nav for menu*/
+
+.navigation__list--secondary {
+  flex-direction: column;
+  align-items: center;
+}
+
+.invisble {
+  display: none;
+}
+
+/* media query for navbar */
+
+@media (max-width: 800px) {
+  .navigation__right-side {
+    display: none;
+  }
+
+  .navigation__hamburger {
+    display: block;
+  }
+}
+
+/* HERO SECTION ---------------------------------*/
+
+.section {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+.landing-page__hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.landing-page__text {
+  max-width: 700px;
+  width: 100%;
+}
+
+.landing-page__header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+  margin-bottom: 2rem;
+}
+
+.landing-page__stool-image {
+  max-width: 300px;
+  width: 100%;
+}
+
+.landing-page__preview-button {
+  margin-left: 2rem;
+}
+
+/* media quiery */
+
+@media (max-width: 800px) {
+  .landing-page__hero {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .landing-page__text {
+    text-align: center;
+  }
+
+  .landing-page__stool-image {
+    margin: auto;
+    margin-top: 2rem;
+    max-width: 400px;
+  }
+}
