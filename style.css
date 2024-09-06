@@ -103,6 +103,7 @@ textarea:not([rows]) {
   --black: #1a1a1a;
   --yellow: #f7ffc2;
   --light-yellow: #fefff5;
+  --blue-violet: #8a2be2;
 }
 
 /* non specific css ---------------------------------*/
@@ -161,7 +162,7 @@ p {
 
 .navigation__list-item a:hover,
 .navigation__list-item a:focus-visible {
-  color: blueviolet;
+  color: var(--blue-violet);
 }
 
 .navigation__right-side {
@@ -172,12 +173,28 @@ p {
 .navigation__icon {
   width: 48px;
   height: 48px;
-  background-color: var(--darker-white);
+  background-color: var(--yellow);
   border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+}
+
+.navigation__icon:hover,
+.navigation__icon:focus-visible {
+  filter: invert(29%) sepia(69%) saturate(6798%) hue-rotate(265deg)
+    brightness(90%) contrast(97%);
 }
 
 .navigation__shopping-cart {
   margin-right: 1rem;
+  background-image: url(assets/shopping.svg);
+}
+
+.navigation__profile-picture {
+  background-image: url(assets/person.svg);
 }
 
 .navigation__hamburger {
